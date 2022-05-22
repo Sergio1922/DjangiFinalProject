@@ -128,7 +128,7 @@ class Question(models.Model):
 class Choice(models.Model):
     questions = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_content = models.TextField()
-    is_correct = False
+    is_correct = models.BooleanField()
 
 # <HINT> The submission model
 # One enrollment could have multiple submission
